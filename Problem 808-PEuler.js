@@ -1,11 +1,19 @@
-const isPrime = (n) => {
-	for(let i = 3; i <= n/2; i+=2){ // if you think about this makes sense as prime numbers of interest are odd
-	   if(n % i === 0){
-		  return false;
-	   }
-	};
-	return true;
- };
+const isPrime = (n) =>{
+    let i = 2;
+    // This will loop from 2 to int(sqrt(x))
+    while (i*i <= n) {
+        // Check if i divides x without leaving a remainder
+        if (n % i == 0) {
+            // This means that n has a factor in between 2 and sqrt(n)
+            // So it is not a prime number
+            return 0;
+        }
+        i += 1;
+    }
+    // If we did not find any factor in the above loop,
+    // then n is a prime number
+    return 1;
+}
 
 let arr6 = []
 let sum = 0

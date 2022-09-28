@@ -18,7 +18,7 @@ const isPrime = (n) =>{
 let arr6 = []
 let sum = 0
 var a = 1
-while(arr6.length < 51){
+while(arr6.length < 50){
 
 	
 	if(isPrime(a)){
@@ -26,9 +26,9 @@ while(arr6.length < 51){
 		b = Math.sqrt(Number(String(c).split("").reverse().join("")))
 		if(b!=a && Number.isInteger(b)){
 			if(isPrime(b)){
-				console.log(a, "   ,    array length:", arr6.length) // just to see that it is infact running
 				arr6.push(c)
 				sum += c
+				console.log(a, "   ,    array length:", arr6.length) // just to see that it is infact running
 			}
 		}
 		
